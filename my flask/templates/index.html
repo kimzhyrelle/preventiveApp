@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile"></div>
+      <nav>
+        <button>Dashboard</button>
+        <button>Mail</button>
+        <button>Archive</button>
+        <button>Maintenance</button>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <header class="topbar">
+        <input type="text" placeholder="Search something..." class="search" />
+        <div class="notification">🔔</div>
+      </header>
+
+      <section class="top-section">
+        <div class="cards">
+          <div class="card">
+            <h4>Overdue Tasks</h4>
+            <p>11</p>
+          </div>
+          <div class="card">
+            <h4>Progress Requests</h4>
+            <p>2</p>
+          </div>
+          <div class="card">
+            <h4>Calendar</h4>
+            <p>4</p>
+          </div>
+        </div>
+
+        <div class="calendar-panel">
+          <h3>October</h3>
+          <div class="calendar-grid">
+            <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+            <span>11</span><span>12</span>
+          </div>
+        </div>
+
+        <div class="reminder">
+          <h3>Reminders</h3>
+          <ul>
+            <li>Team meeting at 3:00 PM</li>
+            <li>Check maintenance log</li>
+            <li>Send progress report</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="middle-section">
+        <div class="work-archive">
+          <h3>Work Archive</h3>
+          <table>
+            <tr><th>TIME</th><th>ACTIVITY</th><th>WORKER</th></tr>
+            <tr><td>8:12 AM</td><td>Checked air-conditioning unit (3rd floor)</td><td>R. Dela Cruz</td></tr>
+            <tr><td>8:45 AM</td><td>Inspected generator fuel level</td><td>P. Navarro</td></tr>
+            <tr><td>9:20 AM</td><td>Replaced burnt-out light (Hallway B)</td><td>M. Santos</td></tr>
+          </table>
+        </div>
+
+        <div class="agenda">
+          <h3>Today's Agenda</h3>
+          <div class="agenda-item">
+            <div class="time">9:00 AM</div>
+            <div class="desc">Check AC unit (3rd floor)</div>
+            <div class="filed">Filed by: Marco</div>
+          </div>
+          <div class="agenda-item">
+            <div class="time">11:00 AM</div>
+            <div class="desc">Inspect aircon filter</div>
+            <div class="filed">Filed by: Bea</div>
+          </div>
+          <div class="agenda-item">
+            <div class="time">2:00 PM</div>
+            <div class="desc">Replace maintenance log</div>
+            <div class="filed">Filed by: John</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chart-section">
+        <h3>Preventive Maintenance Overview</h3>
+        <div class="chart-placeholder">[insert chart here]</div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
